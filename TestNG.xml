@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <listeners>
+        <listener class-name="utilities.Listener.TestListener"/>
+    </listeners>
+
+    <test thread-count="5" name="Test" parallel="classes">
+        <parameter name ="browser" value="chrome"/>
+        <classes>
+            <class name="tests.TC01_VerifyErrorsWhenMandatoryFieldsMissingInContactTest"/>
+            <class name="tests.TC02_VerifySuccessfulContactSubmissionTest"/>
+            <class name="tests.TC03_VerifyErrorForInvalidDataInContactTest"/>
+            <class name="tests.TC04_AddAndVerifyItemsInCartTest"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
